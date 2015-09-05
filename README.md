@@ -2,6 +2,10 @@
 
 > Given DOM element returns styles applied to it.
 
+## Installation
+
+... wip
+
 ## Usage 
 
 ```js
