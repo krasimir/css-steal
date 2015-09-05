@@ -10,7 +10,7 @@ css.toCSSText(); // produces formatted CSS styles
 css.toJS(): // returns an array of objects containing the styles
 ```
 
-`CSSSteal` accepts as many DOM elements as you want. For example:
+`CSSSteal` accepts multiple DOM elements. For example:
 
 ```js
 var a = document.querySelector('.a-class');
