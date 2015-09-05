@@ -22,4 +22,4 @@ var css = CSSSteal(a, b, c);
 
 ## Resources
 
-[StackOverflow: Find all CSS rules that apply to an element](http://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element);
+* [StackOverflow: Find all CSS rules that apply to an element](http://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element)
