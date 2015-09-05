@@ -1,6 +1,6 @@
 # CSS steal
 
-> Given DOM element returns styles applied to it.
+Given DOM element returns styles applied to it and all its children.
 
 ## Installation
 
