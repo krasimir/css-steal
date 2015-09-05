@@ -1,4 +1,3 @@
-// http://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element
 var CSSSteal = function () {
   var api = {}, html = null, styles = [], indent = '  ', elements = false, args = arguments;
 
