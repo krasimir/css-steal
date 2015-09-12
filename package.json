@@ -1,0 +1,25 @@
+{
+  "name": "css-steal",
+  "version": "1.0.0",
+  "description": "Given DOM element returns styles applied to it and all its children.",
+  "main": "src/index.js",
+  "dependencies": {
+    "gulp": "3.9.0"
+  },
+  "author": {
+    "name": "Krasimir Tsonev",
+    "email": "info@krasimirtsonev.com",
+    "url": "http://krasimirtsonev.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "dom",
+    "extract",
+    "fetch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krasimir/css-steal.git"
+  }
+}
