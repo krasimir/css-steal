@@ -1,3 +1,5 @@
+(function() {
+
 var CSSSteal = function () {
   var api = {}, html = null, styles = [], indent = '  ', elements = false, args = arguments;
 
@@ -96,3 +98,16 @@ var CSSSteal = function () {
 
   return api;
 };
+
+var root = this;
+if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    exports = module.exports = CSSSteal;
+  }
+  exports.CSSSteal = CSSSteal;
+} else {
+  root.CSSSteal = CSSSteal;
+}
+}).call(this);
+
+

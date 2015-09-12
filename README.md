@@ -4,11 +4,14 @@ Given DOM element returns styles applied to it and all its children.
 
 ## Installation
 
-... wip
+```js
+npm install css-steal
+```
 
-## Usage 
+## Usage
 
 ```js
+var CSSSteal = require('css-steal');
 var css = CSSSteal(document.querySelector('.my-class'));
 css.toCSSText(); // produces formatted CSS styles
 css.toJS(): // returns an array of objects containing the styles
@@ -22,6 +25,13 @@ var b = document.querySelector('.b-class');
 var c = document.querySelector('.c-class');
 
 var css = CSSSteal(a, b, c);
+```
+It merges the CSS used by the elements.
+
+## Building
+
+```js
+npm run build
 ```
 
 ## Resources
