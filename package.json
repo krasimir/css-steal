@@ -4,7 +4,6 @@
   "description": "Given DOM element returns styles applied to it and all its children.",
   "main": "src/index.js",
   "dependencies": {
-    "gulp": "3.9.0"
   },
   "author": {
     "name": "Krasimir Tsonev",
@@ -26,6 +25,8 @@
     "build": "./node_modules/bin/gulp"
   },
   "devDependencies": {
-    "gulp-uglify": "1.4.1"
+    "gulp": "3.9.0",
+    "gulp-uglify": "1.4.1",
+    "gulp-rename": "1.2.2"
   }
 }
