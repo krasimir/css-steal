@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Given DOM element returns styles applied to it and all its children.",
   "main": "src/index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "author": {
     "name": "Krasimir Tsonev",
     "email": "info@krasimirtsonev.com",
@@ -26,7 +25,11 @@
   },
   "devDependencies": {
     "gulp": "3.9.0",
-    "gulp-uglify": "1.4.1",
-    "gulp-rename": "1.2.2"
+    "gulp-babel": "^5.2.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "1.2.2",
+    "gulp-uglify": "1.4.1"
   }
 }

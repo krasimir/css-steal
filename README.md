@@ -31,7 +31,7 @@ It merges the CSS used by the elements.
 ## Building
 
 ```js
-npm run build
+gulp
 ```
 
 ## Resources
