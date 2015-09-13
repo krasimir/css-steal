@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var babel = require('gulp-babel');
-var concat = require('gulp-concat');
-var browserify = require('gulp-browserify');
+var babelify = require('babelify');
+var browserify = require('browserify');
 var plumber = require('gulp-plumber');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
  
 gulp.task('build-lib', function() {
   return gulp.src('src/*.js')
@@ -16,14 +17,15 @@ gulp.task('build-lib', function() {
 });
 
 gulp.task('chrome', function () {
-  return gulp.src('chrome/js/src/index.js')
-    .pipe(plumber())
-    .pipe(babel())
-    .pipe(browserify({
-      insertGlobals : true
-    }))
-    .pipe(concat('script.js'))
+  browserify({ entries: 'chrome/js/src/index.js', debug: true })
+    .transform(babelify)
+    .bundle()
+    .on('error', function(err){
+      console.log(err.message);
+    })
+    .pipe(source('script.js'))
     .pipe(gulp.dest('chrome/js'))
+    .pipe(buffer())
     .pipe(rename('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('chrome/js'));

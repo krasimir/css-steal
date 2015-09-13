@@ -21,15 +21,19 @@
     "url": "https://github.com/krasimir/css-steal.git"
   },
   "scripts": {
-    "build": "./node_modules/bin/gulp"
+    "build": "./node_modules/.bin/gulp",
+    "dev": "./node_modules/.bin/gulp dev"
   },
   "devDependencies": {
+    "browserify": "^11.1.0",
+    "buffer": "^3.4.3",
     "gulp": "3.9.0",
     "gulp-babel": "5.2.1",
     "gulp-browserify": "0.5.1",
-    "gulp-concat": "2.6.0",
     "gulp-plumber": "1.0.1",
     "gulp-rename": "1.2.2",
-    "gulp-uglify": "1.4.1"
+    "gulp-uglify": "1.4.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

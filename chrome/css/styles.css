@@ -4,5 +4,62 @@ body, html {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+#dashboard {
+  height: 100%;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.items-selected, .item-css {
+  width: 50%;
+}
+.items-selected a {
+  display: block;
+  width: 100%;
+  background: #FFF;
+  border-bottom: 1px solid #999;
+  padding: .5em;
+  text-decoration: none;
+  color: #000;
+  transition: background 300ms;
+  overflow: hidden;
+}
+.items-selected a:hover {
+  background: #D5D5D5;
+}
+.item-css {
+  padding: .5em;
+  border-left: 1px solid #999;
+  height: 100%;
+  overflow: scroll;
+}
+.item-css pre {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica;
+  font-size: 0.8em;
+}
+.steal {
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  padding: .4em;
+  font-size: 1em;
+  text-transform: uppercase;
+  border: 1px solid #999;
+  border-radius: .4em;
+  box-shadow: 0px 1px 2px #888888;
+}
+.steal:disabled {
+  background: #FFF;
+  color: #B0B0B0;
+  box-shadow: none;
 }

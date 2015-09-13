@@ -1,5 +1,5 @@
 chrome.devtools.panels.elements.createSidebarPane(
-	"CSSMELL",
+	"CSSSteal",
 	function(sidebar) {
 		sidebar.setPage("index.html");
 		sidebar.setHeight("2500px");
