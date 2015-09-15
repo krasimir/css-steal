@@ -9,6 +9,11 @@ body, html {
 *, *:before, *:after {
   box-sizing: border-box;
 }
+.cf::after, .cf::before {
+  clear: both;
+  content: ' ';
+  display: block;
+}
 #dashboard {
   height: 100%;
 }
@@ -49,16 +54,16 @@ body, html {
   padding: .5em;
   border-left: 1px solid #999;
 }
-.css-holder {
-  
-}
 .item-css pre {
   padding: 0;
   margin: 0;
   font-family: Helvetica;
   font-size: 0.8em;
 }
-.steal {
+
+/* Navigation */
+
+nav button {
   width: 100%;
   display: block;
   padding: .4em;
@@ -74,19 +79,19 @@ body, html {
   outline: 0;
   margin-bottom: .3em;
 }
-.steal:focus {
+nav button:focus {
   outline: 0;
 }
-.steal:hover {
+nav button:hover {
   background: #84d184;
 }
-.steal:disabled {
+nav button:disabled {
   background: #FFF;
   color: #B0B0B0;
   box-shadow: none;
   cursor: default;
   border-bottom: none
 }
-.steal:active {
+nav button:active {
   box-shadow: none;
 }

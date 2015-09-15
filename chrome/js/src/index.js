@@ -7,7 +7,8 @@ import { $ } from './DOMhelpers';
 
 var cssPreview = new CSSPreview();
 var links = new Links({
-  onLinkSelected: cssPreview.render.bind(cssPreview)
+  onLinkSelected: cssPreview.render.bind(cssPreview),
+  onClear: cssPreview.clear.bind(cssPreview)
 });
 var page = new Page({
   onElementSelected: links.addLink.bind(links)

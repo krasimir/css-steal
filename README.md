@@ -28,10 +28,10 @@ var css = CSSSteal(a, b, c);
 ```
 It merges the CSS used by the elements.
 
-## Building
+## Development
 
 ```js
-gulp
+npm run dev
 ```
 
 ## Resources

@@ -10,7 +10,7 @@ export default class CSSPreview {
   }
   render(els) {
     var selectors = els.map(el => el.selector);
-    console.log(selectors);
+
     execute(
       this._CSSSteal,
       [CSSSteal, '[' + selectors.map(s => '"' + s + '"').join(',') + ']'],
@@ -18,6 +18,9 @@ export default class CSSPreview {
         this.container.innerHTML = '<pre>' + css + '</pre>';
       }
     );
+  }
+  clear() {
+    this.container.innerHTML = '';
   }
   _CSSSteal(CSSSteal, selectors) {
     var elements = selectors.map(sel => document.querySelector(sel));
