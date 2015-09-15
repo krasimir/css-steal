@@ -13,24 +13,25 @@ export default class Links {
     this.container.addEventListener('click', this.handleLink.bind(this));
     this.steal.addEventListener('click', this.handleGetCSS.bind(this));
   }
-  addLink(element) {
-    this.elements.push(element);
-    return this;
+  addLink({ label, selector }) {
+    this.elements.push({ label, selector });
+    return this.render();
   }
   render() {
-    var links = this.elements.map((el, i) => {
-      var nodeName = el.nodeName.toString().toLowerCase();
-      var classes = el.getAttribute('class');
+    this.container.innerHTML = 
+    Array.prototype.slice.call(this.elements)
+    .reverse()
+    .map((el, i) => {
       var html = '';
 
       html += '<a href="#" data-index="item' + i + '">';
       html += '<i class="fa fa-check-square-o"></i> &lt;';
-      html += nodeName + (classes ? ' class="' + classes + '"' : '');
+      html += el.label;
       html += '&gt;</a>';
       return html;
-    });
+    })
+    .join('');
 
-    this.container.innerHTML = links.join('');
     return this;
   }
   handleLink(e) {
@@ -52,5 +53,9 @@ export default class Links {
   }
   handleGetCSS(e) {
     this.onLinkSelected(this.elements.filter((el, i) => this.selected['item' + i]));
+  }
+  clear() {
+    this.elements = [];
+    this.selected = [];
   }
 };
