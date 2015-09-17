@@ -1,6 +1,6 @@
 {
   "name": "css-steal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Given DOM element returns styles applied to it and all its children.",
   "main": "src/index.js",
   "dependencies": {},
