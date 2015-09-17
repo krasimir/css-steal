@@ -28,6 +28,12 @@ var css = CSSSteal(a, b, c);
 ```
 It merges the CSS used by the elements.
 
+## Chrome extension
+
+Download [here](https://chrome.google.com/webstore/detail/csssteal/ellabkgcnhflepncdcnelhgclfkgmanh).
+
+![CSSSteal](http://krasimirtsonev.com/blog/articles/CSSSteal/css-steal.jpg)
+
 ## Development
 
 ```js
