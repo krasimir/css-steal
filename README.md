@@ -42,4 +42,5 @@ npm run dev
 
 ## Resources
 
+* [CSSSteal - Chrome extension that extracts CSS](http://krasimirtsonev.com/blog/article/csssteal-chrome-extension-that-extracts-css)
 * [StackOverflow: Find all CSS rules that apply to an element](http://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element)
