@@ -26,12 +26,16 @@ var CSSSteal = function () {
     return arr;
   }
   var getRules = function (a) {
-    var sheets = document.styleSheets, result = [];
+    var sheets = document.styleSheets, result = [], selectorText;
+
     a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
     for (var i in sheets) {
       var rules = sheets[i].rules || sheets[i].cssRules;
       for (var r in rules) {
-        if (a.matches(rules[r].selectorText)) {
+        selectorText = rules[r].selectorText ? rules[r].selectorText.split(' ').map(function(piece) {
+          return piece.split(/(:|::)/)[0];
+        }).join(' ') : false;
+        if (a.matches(selectorText)) {
           result.push(rules[r]);
         }
       }
