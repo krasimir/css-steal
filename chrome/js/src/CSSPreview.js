@@ -25,6 +25,6 @@ export default class CSSPreview {
   _CSSSteal(CSSSteal, selectors) {
     var elements = selectors.map(sel => document.querySelector(sel));
     
-    return CSSSteal.apply(null, elements).toCSSText()
+    return CSSSteal.apply(null, elements).toCSSText();
   }
 }

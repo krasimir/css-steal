@@ -33,10 +33,14 @@ var CSSSteal = function () {
       var rules = sheets[i].rules || sheets[i].cssRules;
       for (var r in rules) {
         selectorText = rules[r].selectorText ? rules[r].selectorText.split(' ').map(function(piece) {
-          return piece.split(/(:|::)/)[0];
+          return piece ? piece.split(/(:|::)/)[0] : false;
         }).join(' ') : false;
-        if (a.matches(selectorText)) {
-          result.push(rules[r]);
+        try {
+          if (a.matches(selectorText)) {
+            result.push(rules[r]);
+          }
+        } catch(e) {
+          // can not run matches on this selector
         }
       }
     }
